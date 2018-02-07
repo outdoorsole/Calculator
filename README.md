@@ -8,10 +8,10 @@
 
 ## User Interface Requirements
 ### Buttons
-- [ ] Three digit buttons (1, 2, 3)
-- [ ] Buttons for addition and substraction (+, -)
-- [ ] A clear button (C)
-- [ ] An equals button (=)
+- [x] Three digit buttons (1, 2, 3)
+- [x] Buttons for addition and substraction (+, -)
+- [x] A clear button (C)
+- [x] An equals button (=)
 ### Text Field
 - [ ] UITextField to display text at the top
     - Use rounded rectangle border for calculator display
