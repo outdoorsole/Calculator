@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     // MARK: - Properties
     // will store last digit selected by user
     var number: Int = 0
-    // will store results of calculation
+    // will store result of calculation
     var result: Int = 0
     
     // MARK: - Outlets
@@ -52,21 +52,38 @@ class ViewController: UIViewController {
     
     @IBAction func plusButtonPressed(_ sender: UIButton) {
         if let value = displayTextField.text {
+            print("plusButtonPressed")
+            
             print("value: \(value)")
+            // store previously selected number
             number = Int(value)!
             print("number: \(number)")
-            print("plusButtonPressed")
+            
+            // update display
             displayTextField.text = "+"
+            
+            // store number for calculation
+            result = number
+            print("result: \(result)")
+            
         }
     }
     
     @IBAction func minusButtonPressed(_ sender: UIButton) {
         if let value = displayTextField.text {
+            print("minusButtonPressed")
+            
             print("value: \(value)")
+            // store previously selected number
             number = Int(value)!
             print("number: \(number)")
-            print("minusButtonPressed")
+            
+            // update display
             displayTextField.text = "-"
+            
+            // store number for calculation
+            result = number
+            print("result: \(result)")
         }
     }
     
