@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    // MARK: - IBOutlets
+    // MARK: - Outlets
     @IBOutlet weak var displayTextField: UITextField!
     
     // MARK: - View Life Cycle
@@ -19,5 +19,22 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    // MARK: - Actions
+    @IBAction func oneButtonPressed(_ sender: UIButton) {
+        print("oneButtonPressed")
+    }
+    
+    @IBAction func twoButtonPressed(_ sender: UIButton) {
+        print("twoButtonPressed")
+    }
+    
+    @IBAction func threeButtonPressed(_ sender: UIButton) {
+        print("threeButtonPressed")
+    }
+    
+    @IBAction func clearButtonPressed(_ sender: UIButton) {
+        print("clearButtonPressed")
+    }
+    
 }
 
