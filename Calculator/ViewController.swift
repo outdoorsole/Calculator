@@ -49,17 +49,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plusButtonPressed(_ sender: UIButton) {
-        number = Int(displayTextField.text!)!
-        print(number)
-        print("plusButtonPressed")
-        displayTextField.text = "+"
+        if let value = displayTextField.text {
+            print("value: \(value)")
+            number = Int(value)!
+            print("number: \(number)")
+            print("plusButtonPressed")
+            displayTextField.text = "+"
+        }
     }
     
     @IBAction func minusButtonPressed(_ sender: UIButton) {
-        number = Int(displayTextField.text!)!
-        print(number)
-        print("minusButtonPressed")
-        displayTextField.text = "-"
+        if let value = displayTextField.text {
+            print("value: \(value)")
+            number = Int(value)!
+            print("number: \(number)")
+            print("minusButtonPressed")
+            displayTextField.text = "-"
+        }
     }
     
 }
