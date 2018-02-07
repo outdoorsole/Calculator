@@ -154,6 +154,7 @@ class ViewController: UIViewController {
         displayTextField.text = String(result)
     }
     
+    // MARK: - Helper method
     func calculateResult() -> Int {
         var total = 0
         
