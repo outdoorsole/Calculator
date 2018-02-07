@@ -11,8 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: - Properties
-    // will store digit selected by user
+    // will store last digit selected by user
     var number: Int = 0
+    // will store results of calculation
+    var result: Int = 0
     
     // MARK: - Outlets
     @IBOutlet weak var displayTextField: UITextField!
