@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: - Properties
-    // will store last digit selected by user
-    var previousInput: Int = 0
+    // will store button value selected by user
+    var previousInput: String = ""
     // will store result of calculation
     var result: Int = 0
     
@@ -51,39 +51,49 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plusButtonPressed(_ sender: UIButton) {
+        // Check that display value is not nil
         if let value = displayTextField.text {
             print("plusButtonPressed")
-            
             print("value: \(value)")
-            // store previously selected previousInput
-            previousInput = Int(value)!
+            
+            // store previousInput from display
+            previousInput = value
             print("previousInput: \(previousInput)")
+            
+            // store previousInput for calculation
+            result = Int(previousInput)!
+            print("result: \(result)")
             
             // update display
             displayTextField.text = "+"
             
-            // store previousInput for calculation
-            result = previousInput
-            print("result: \(result)")
+            // update input
+            previousInput = displayTextField.text!
+            print("previousInput: \(previousInput)")
             
         }
     }
     
     @IBAction func minusButtonPressed(_ sender: UIButton) {
+        // Check that display value is not nil
         if let value = displayTextField.text {
             print("minusButtonPressed")
-            
             print("value: \(value)")
-            // store previously selected previousInput
-            previousInput = Int(value)!
+            
+            // store previousInput from display
+            previousInput = value
             print("previousInput: \(previousInput)")
+            
+            // store previousInput for calculation
+            result = Int(previousInput)!
+            print("result: \(result)")
             
             // update display
             displayTextField.text = "-"
             
-            // store previousInput for calculation
-            result = previousInput
-            print("result: \(result)")
+            // update input
+            previousInput = displayTextField.text!
+            print("previousInput: \(previousInput)")
         }
     }
     
