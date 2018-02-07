@@ -30,18 +30,51 @@ class ViewController: UIViewController {
         print("oneButtonPressed")
         displayTextField.text = "1"
         print(displayTextField.text!)
+        
+        if previousInput == "+" || previousInput == "-" {
+            // store second number for calculation
+            previousInput = "1"
+            print("previousInput: \(previousInput)")
+            print("result: \(result)")
+            
+            // perform calculation and print
+            result += Int(previousInput)!
+            print("calculation result: \(result)")
+        }
     }
     
     @IBAction func twoButtonPressed(_ sender: UIButton) {
         print("twoButtonPressed")
         displayTextField.text = "2"
         print(displayTextField.text!)
+        
+        if previousInput == "+" || previousInput == "-" {
+            // store second number for calculation
+            previousInput = "2"
+            print("previousInput: \(previousInput)")
+            print("result: \(result)")
+            
+            // perform calculation and print
+            result += Int(previousInput)!
+            print("calculation result: \(result)")
+        }
     }
     
     @IBAction func threeButtonPressed(_ sender: UIButton) {
         print("threeButtonPressed")
         displayTextField.text = "3"
         print(displayTextField.text!)
+        
+        if previousInput == "+"  || previousInput == "-" {
+            // store second number for calculation
+            previousInput = "3"
+            print("previousInput: \(previousInput)")
+            print("result: \(result)")
+            
+            // perform calculation and print
+            result += Int(previousInput)!
+            print("calculation result: \(result)")
+        }
     }
     
     @IBAction func clearButtonPressed(_ sender: UIButton) {
