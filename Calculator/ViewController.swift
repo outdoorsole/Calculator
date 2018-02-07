@@ -22,18 +22,22 @@ class ViewController: UIViewController {
     // MARK: - Actions
     @IBAction func oneButtonPressed(_ sender: UIButton) {
         print("oneButtonPressed")
+        displayTextField.text = "1"
     }
     
     @IBAction func twoButtonPressed(_ sender: UIButton) {
         print("twoButtonPressed")
+        displayTextField.text = "2"
     }
     
     @IBAction func threeButtonPressed(_ sender: UIButton) {
         print("threeButtonPressed")
+        displayTextField.text = "3"
     }
     
     @IBAction func clearButtonPressed(_ sender: UIButton) {
         print("clearButtonPressed")
+        displayTextField.text = "0"
     }
     
 }

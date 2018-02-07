@@ -19,8 +19,8 @@
 
 ## Behavior Requirements
 ### Button Entry
-- [ ] Simple versions of "1", "2", "3", and "C" buttons in working state
-- [ ] When the user taps a digit, the text in the display should match the digit pressed (e.g., If the user taps the 2 button, the display should be set to "2". If the user presses C, the display should be set to "0".)
+- [x] Simple versions of "1", "2", "3", and "C" buttons in working state
+- [x] When the user taps a digit, the text in the display should match the digit pressed (e.g., If the user taps the 2 button, the display should be set to "2". If the user presses C, the display should be set to "0".)
     - Note: This means that a user can only enter one of three possible numbers: 1, 2, or 3. In other words, repeatedly tapping "1" three times will not result in "111" appearing on the display. Instead, it will just be "1".
 
 ### Calculator
