@@ -69,6 +69,9 @@
                                 <rect key="frame" x="164" y="333" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="="/>
+                                <connections>
+                                    <action selector="equalsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dZg-6F-cG9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVc-Mn-Wbj">
                                 <rect key="frame" x="81" y="190" width="46" height="30"/>

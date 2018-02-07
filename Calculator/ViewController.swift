@@ -31,7 +31,8 @@ class ViewController: UIViewController {
         displayTextField.text = "1"
         print(displayTextField.text!)
         
-        if previousInput == "+" || previousInput == "-" {
+        // Addition
+        if previousInput == "+" {
             // store second number for calculation
             previousInput = "1"
             print("previousInput: \(previousInput)")
@@ -41,6 +42,17 @@ class ViewController: UIViewController {
             result += Int(previousInput)!
             print("calculation result: \(result)")
         }
+        // Subtraction
+        else if previousInput == "-" {
+            // store second number for calculation
+            previousInput = "1"
+            print("previousInput: \(previousInput)")
+            print("result: \(result)")
+            
+            // perform calculation and print
+            result -= Int(previousInput)!
+            print("calculation result: \(result)")
+        }
     }
     
     @IBAction func twoButtonPressed(_ sender: UIButton) {
@@ -48,7 +60,8 @@ class ViewController: UIViewController {
         displayTextField.text = "2"
         print(displayTextField.text!)
         
-        if previousInput == "+" || previousInput == "-" {
+        // Addition
+        if previousInput == "+" {
             // store second number for calculation
             previousInput = "2"
             print("previousInput: \(previousInput)")
@@ -58,14 +71,26 @@ class ViewController: UIViewController {
             result += Int(previousInput)!
             print("calculation result: \(result)")
         }
+        // Subtraction
+        else if previousInput == "-" {
+            // store second number for calculation
+            previousInput = "2"
+            print("previousInput: \(previousInput)")
+            print("result: \(result)")
+            
+            // perform calculation and print
+            result -= Int(previousInput)!
+            print("calculation result: \(result)")
+        }
     }
     
     @IBAction func threeButtonPressed(_ sender: UIButton) {
         print("threeButtonPressed")
         displayTextField.text = "3"
         print(displayTextField.text!)
-        
-        if previousInput == "+"  || previousInput == "-" {
+ 
+        // Addition
+        if previousInput == "+" {
             // store second number for calculation
             previousInput = "3"
             print("previousInput: \(previousInput)")
@@ -73,6 +98,17 @@ class ViewController: UIViewController {
             
             // perform calculation and print
             result += Int(previousInput)!
+            print("calculation result: \(result)")
+        }
+        // Subtraction
+        else if previousInput == "-" {
+            // store second number for calculation
+            previousInput = "3"
+            print("previousInput: \(previousInput)")
+            print("result: \(result)")
+            
+            // perform calculation and print
+            result -= Int(previousInput)!
             print("calculation result: \(result)")
         }
     }
@@ -128,6 +164,13 @@ class ViewController: UIViewController {
             previousInput = displayTextField.text!
             print("previousInput: \(previousInput)")
         }
+    }
+ 
+    @IBAction func equalsButtonPressed(_ sender: UIButton) {
+        print("equalsButtonPressed")
+        
+        // display the results of calculation
+        displayTextField.text = String(result)
     }
     
 }
