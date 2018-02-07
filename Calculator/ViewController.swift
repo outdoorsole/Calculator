@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     // will store second value (digit) selected by user
     var secondValue: Int?
     
-    // will store result of calculation
+    // will store result of calculation (default is 0)
     var result: Int = 0
     
     // will store the kind of operation being performed
@@ -30,6 +30,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Update display to show default result value (0)
+        displayTextField.text = String(result)
     }
 
     // MARK: - Actions
