@@ -11,11 +11,16 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: - Properties
-    // will store button value selected by user
-    var previousInput: String = ""
+    // will store first value (digit) selected by user
+    var firstValue: Int?
+    
+    // will store second value (digit) selected by user
+    var secondValue: Int?
+    
     // will store result of calculation
     var result: Int = 0
-    // will store which kind of operation is being performed
+    
+    // will store the kind of operation being performed
     var mathOperation: String?
     
     // MARK: - Outlets
@@ -30,89 +35,62 @@ class ViewController: UIViewController {
     // MARK: - Actions
     @IBAction func oneButtonPressed(_ sender: UIButton) {
         print("oneButtonPressed")
+        
+        // Both values are empty, store as the first value
+        if firstValue == nil && secondValue == nil {
+            firstValue = 1
+        }
+        
+        // The first value has been recorded, need the second value
+        else if firstValue != nil && secondValue == nil {
+            secondValue = 1
+        } else {
+            print("You have already selected 2 values to perform math on.")
+        }
+        
+        // Update the display
         displayTextField.text = "1"
         print(displayTextField.text!)
-        
-        // Addition
-        if previousInput == "+" {
-            // store second number for calculation
-            previousInput = "1"
-            print("previousInput: \(previousInput)")
-            print("result: \(result)")
-            
-            // perform calculation and print
-            result += Int(previousInput)!
-            print("calculation result: \(result)")
-        }
-        // Subtraction
-        else if previousInput == "-" {
-            // store second number for calculation
-            previousInput = "1"
-            print("previousInput: \(previousInput)")
-            print("result: \(result)")
-            
-            // perform calculation and print
-            result -= Int(previousInput)!
-            print("calculation result: \(result)")
-        }
     }
     
     @IBAction func twoButtonPressed(_ sender: UIButton) {
         print("twoButtonPressed")
+        
+        // Both values are empty, store as the first value
+        if firstValue == nil && secondValue == nil {
+            firstValue = 2
+        }
+            
+            // The first value has been recorded, need the second value
+        else if firstValue != nil && secondValue == nil {
+            secondValue = 2
+        } else {
+            print("You have already selected 2 values to perform math on.")
+        }
+
+        // Update the display
         displayTextField.text = "2"
         print(displayTextField.text!)
-        
-        // Addition
-        if previousInput == "+" {
-            // store second number for calculation
-            previousInput = "2"
-            print("previousInput: \(previousInput)")
-            print("result: \(result)")
-            
-            // perform calculation and print
-            result += Int(previousInput)!
-            print("calculation result: \(result)")
-        }
-        // Subtraction
-        else if previousInput == "-" {
-            // store second number for calculation
-            previousInput = "2"
-            print("previousInput: \(previousInput)")
-            print("result: \(result)")
-            
-            // perform calculation and print
-            result -= Int(previousInput)!
-            print("calculation result: \(result)")
-        }
     }
     
     @IBAction func threeButtonPressed(_ sender: UIButton) {
         print("threeButtonPressed")
+        
+        // Both values are empty, store as the first value
+        if firstValue == nil && secondValue == nil {
+            firstValue = 3
+        }
+            
+        // The first value has been recorded, need the second value
+        else if firstValue != nil && secondValue == nil {
+            secondValue = 3
+        } else {
+            print("You have already selected 2 values to perform math on.")
+        }
+
+        // Update the display
         displayTextField.text = "3"
         print(displayTextField.text!)
- 
-        // Addition
-        if previousInput == "+" {
-            // store second number for calculation
-            previousInput = "3"
-            print("previousInput: \(previousInput)")
-            print("result: \(result)")
-            
-            // perform calculation and print
-            result += Int(previousInput)!
-            print("calculation result: \(result)")
-        }
-        // Subtraction
-        else if previousInput == "-" {
-            // store second number for calculation
-            previousInput = "3"
-            print("previousInput: \(previousInput)")
-            print("result: \(result)")
-            
-            // perform calculation and print
-            result -= Int(previousInput)!
-            print("calculation result: \(result)")
-        }
     }
     
     @IBAction func clearButtonPressed(_ sender: UIButton) {
@@ -158,6 +136,10 @@ class ViewController: UIViewController {
         
         // display the results of calculation
         displayTextField.text = String(result)
+    }
+    
+    func calculateResult() {
+        // Perform calculation based on math operator
     }
     
 }
