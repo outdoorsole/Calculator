@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     var result: Int = 0
     
     // will store the kind of operation being performed
-    var mathOperation: String?
+    var mathOperator: String?
     
     // MARK: - Outlets
     @IBOutlet weak var displayTextField: UITextField!
@@ -106,10 +106,10 @@ class ViewController: UIViewController {
         print("plusButtonPressed")
         
         // Check that a math operation has not been previously stored
-        if mathOperation == nil {
+        if mathOperator == nil {
             
             // update math operation property
-            mathOperation = "+"
+            mathOperator = "+"
             
             // update display
             displayTextField.text = "+"
@@ -122,10 +122,10 @@ class ViewController: UIViewController {
         print("minusButtonPressed")
         
         // Check that a math operation has not been previously stored
-        if mathOperation == nil {
+        if mathOperator == nil {
             
             // update math operation property
-            mathOperation = "-"
+            mathOperator = "-"
             
             // update display
             displayTextField.text = "-"
@@ -137,12 +137,26 @@ class ViewController: UIViewController {
     @IBAction func equalsButtonPressed(_ sender: UIButton) {
         print("equalsButtonPressed")
         
+        // Perform calculation
+        result = calculateResult()
+        
         // display the results of calculation
         displayTextField.text = String(result)
     }
     
-    func calculateResult() {
-        // Perform calculation based on math operator
+    func calculateResult() -> Int {
+        var total = 0
+        
+        // Check that all properties have a value
+        if firstValue != nil && secondValue != nil && mathOperator != nil {
+            // Check operator to pick math operation
+            if mathOperator == "+" {
+                total = firstValue! + secondValue!
+            } else if mathOperator == "-" {
+                total = firstValue! - secondValue!
+            }
+        }
+        return total
     }
     
 }
