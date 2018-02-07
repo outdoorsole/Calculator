@@ -12,6 +12,10 @@
 - [ ] Buttons for addition and substraction (+, -)
 - [ ] A clear button (C)
 - [ ] An equals button (=)
+### Text Field
+- [ ] UITextField to display text at the top
+    - Use rounded rectangle border for calculator display
+    - Text entry should be disabled for text field (buttons should be used instead)
 
 ## Behavior Requirements
 ### Button Entry
