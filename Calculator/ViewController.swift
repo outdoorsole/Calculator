@@ -26,38 +26,40 @@ class ViewController: UIViewController {
     // MARK: - Actions
     @IBAction func oneButtonPressed(_ sender: UIButton) {
         print("oneButtonPressed")
-        number = 1
-        displayTextField.text = String(number)
-        print(number)
+        displayTextField.text = "1"
+        print(displayTextField.text!)
     }
     
     @IBAction func twoButtonPressed(_ sender: UIButton) {
         print("twoButtonPressed")
-        number = 2
         displayTextField.text = "2"
-        print(number)
+        print(displayTextField.text!)
     }
     
     @IBAction func threeButtonPressed(_ sender: UIButton) {
         print("threeButtonPressed")
-        number = 3
         displayTextField.text = "3"
-        print(number)
+        print(displayTextField.text!)
     }
     
     @IBAction func clearButtonPressed(_ sender: UIButton) {
         print("clearButtonPressed")
-        number = 0
         displayTextField.text = "0"
-        print(number)
+        print(displayTextField.text!)
     }
     
     @IBAction func plusButtonPressed(_ sender: UIButton) {
+        number = Int(displayTextField.text!)!
+        print(number)
         print("plusButtonPressed")
+        displayTextField.text = "+"
     }
     
     @IBAction func minusButtonPressed(_ sender: UIButton) {
+        number = Int(displayTextField.text!)!
+        print(number)
         print("minusButtonPressed")
+        displayTextField.text = "-"
     }
     
 }
