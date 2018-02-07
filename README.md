@@ -8,3 +8,9 @@
 
 - Use properties and methods in a ViewController class to handle an app's logic
 
+## User Interface Requirements
+### Buttons
+- [ ] Three digit buttons (1, 2, 3)
+- [ ] Buttons for addition and substraction (+, -)
+- [ ] A clear button (C)
+- [ ] An equals button (=)
