@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     var previousInput: String = ""
     // will store result of calculation
     var result: Int = 0
+    // will store which kind of operation is being performed
+    var mathOperation: String?
     
     // MARK: - Outlets
     @IBOutlet weak var displayTextField: UITextField!
@@ -120,49 +122,34 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plusButtonPressed(_ sender: UIButton) {
-        // Check that display value is not nil
-        if let value = displayTextField.text {
-            print("plusButtonPressed")
-            print("value: \(value)")
+        print("plusButtonPressed")
+        
+        // Check that a math operation has not been previously stored
+        if mathOperation == nil {
             
-            // store previousInput from display
-            previousInput = value
-            print("previousInput: \(previousInput)")
-            
-            // store previousInput for calculation
-            result = Int(previousInput)!
-            print("result: \(result)")
+            // update math operation property
+            mathOperation = "+"
             
             // update display
             displayTextField.text = "+"
-            
-            // update input
-            previousInput = displayTextField.text!
-            print("previousInput: \(previousInput)")
-            
+        } else {
+            print("Error: cannot select another math operation.")
         }
     }
     
     @IBAction func minusButtonPressed(_ sender: UIButton) {
-        // Check that display value is not nil
-        if let value = displayTextField.text {
-            print("minusButtonPressed")
-            print("value: \(value)")
+        print("minusButtonPressed")
+        
+        // Check that a math operation has not been previously stored
+        if mathOperation == nil {
             
-            // store previousInput from display
-            previousInput = value
-            print("previousInput: \(previousInput)")
-            
-            // store previousInput for calculation
-            result = Int(previousInput)!
-            print("result: \(result)")
+            // update math operation property
+            mathOperation = "-"
             
             // update display
             displayTextField.text = "-"
-            
-            // update input
-            previousInput = displayTextField.text!
-            print("previousInput: \(previousInput)")
+        } else {
+            print("Error: cannot select another math operation.")
         }
     }
  
