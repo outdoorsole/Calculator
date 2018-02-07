@@ -45,11 +45,17 @@
                                 <rect key="frame" x="81" y="262" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="plusButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vaQ-05-rY4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EF7-eP-tcn">
                                 <rect key="frame" x="164" y="262" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="minusButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CrZ-x7-W24"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDr-a4-cm5">
                                 <rect key="frame" x="262" y="262" width="46" height="30"/>

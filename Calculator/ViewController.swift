@@ -52,5 +52,13 @@ class ViewController: UIViewController {
         print(number)
     }
     
+    @IBAction func plusButtonPressed(_ sender: UIButton) {
+        print("plusButtonPressed")
+    }
+    
+    @IBAction func minusButtonPressed(_ sender: UIButton) {
+        print("minusButtonPressed")
+    }
+    
 }
 
