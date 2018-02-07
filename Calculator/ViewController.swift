@@ -98,6 +98,16 @@ class ViewController: UIViewController {
     
     @IBAction func clearButtonPressed(_ sender: UIButton) {
         print("clearButtonPressed")
+        
+        // Set both values and math operator equal to nil (default value)
+        firstValue = nil
+        secondValue = nil
+        mathOperator = nil
+        
+        // Clear result, set to default value
+        result = 0
+        
+        // Update display to reflect defaults
         displayTextField.text = "0"
         print(displayTextField.text!)
     }
@@ -108,10 +118,10 @@ class ViewController: UIViewController {
         // Check that a math operation has not been previously stored
         if mathOperator == nil {
             
-            // update math operation property
+            // Update math operation property
             mathOperator = "+"
             
-            // update display
+            // Update display
             displayTextField.text = "+"
         } else {
             print("Error: cannot select another math operation.")
@@ -124,10 +134,10 @@ class ViewController: UIViewController {
         // Check that a math operation has not been previously stored
         if mathOperator == nil {
             
-            // update math operation property
+            // Update math operation property
             mathOperator = "-"
             
-            // update display
+            // Update display
             displayTextField.text = "-"
         } else {
             print("Error: cannot select another math operation.")
@@ -140,7 +150,7 @@ class ViewController: UIViewController {
         // Perform calculation
         result = calculateResult()
         
-        // display the results of calculation
+        // Display the results of calculation
         displayTextField.text = String(result)
     }
     
