@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     // MARK: - Properties
     // will store last digit selected by user
-    var number: Int = 0
+    var previousInput: Int = 0
     // will store result of calculation
     var result: Int = 0
     
@@ -55,15 +55,15 @@ class ViewController: UIViewController {
             print("plusButtonPressed")
             
             print("value: \(value)")
-            // store previously selected number
-            number = Int(value)!
-            print("number: \(number)")
+            // store previously selected previousInput
+            previousInput = Int(value)!
+            print("previousInput: \(previousInput)")
             
             // update display
             displayTextField.text = "+"
             
-            // store number for calculation
-            result = number
+            // store previousInput for calculation
+            result = previousInput
             print("result: \(result)")
             
         }
@@ -74,15 +74,15 @@ class ViewController: UIViewController {
             print("minusButtonPressed")
             
             print("value: \(value)")
-            // store previously selected number
-            number = Int(value)!
-            print("number: \(number)")
+            // store previously selected previousInput
+            previousInput = Int(value)!
+            print("previousInput: \(previousInput)")
             
             // update display
             displayTextField.text = "-"
             
-            // store number for calculation
-            result = number
+            // store previousInput for calculation
+            result = previousInput
             print("result: \(result)")
         }
     }
