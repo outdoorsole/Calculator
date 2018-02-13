@@ -37,7 +37,6 @@ class ViewController: UIViewController {
 
     // MARK: - Actions
     @IBAction func oneButtonPressed(_ sender: UIButton) {
-        print("oneButtonPressed")
         
         // Both values are empty, store as the first value
         if firstValue == nil && secondValue == nil {
@@ -53,11 +52,9 @@ class ViewController: UIViewController {
         
         // Update the display
         displayTextField.text = "1"
-        print(displayTextField.text!)
     }
     
     @IBAction func twoButtonPressed(_ sender: UIButton) {
-        print("twoButtonPressed")
         
         // Both values are empty, store as the first value
         if firstValue == nil && secondValue == nil {
@@ -73,11 +70,9 @@ class ViewController: UIViewController {
 
         // Update the display
         displayTextField.text = "2"
-        print(displayTextField.text!)
     }
     
     @IBAction func threeButtonPressed(_ sender: UIButton) {
-        print("threeButtonPressed")
         
         // Both values are empty, store as the first value
         if firstValue == nil && secondValue == nil {
@@ -93,11 +88,9 @@ class ViewController: UIViewController {
 
         // Update the display
         displayTextField.text = "3"
-        print(displayTextField.text!)
     }
     
     @IBAction func clearButtonPressed(_ sender: UIButton) {
-        print("clearButtonPressed")
         
         // Set both values and math operator equal to nil (default value)
         firstValue = nil
@@ -109,11 +102,9 @@ class ViewController: UIViewController {
         
         // Update display to reflect defaults
         displayTextField.text = "0"
-        print(displayTextField.text!)
     }
     
     @IBAction func plusButtonPressed(_ sender: UIButton) {
-        print("plusButtonPressed")
         
         // Check that a math operation has not been previously stored
         if mathOperator == nil {
@@ -129,7 +120,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func minusButtonPressed(_ sender: UIButton) {
-        print("minusButtonPressed")
         
         // Check that a math operation has not been previously stored
         if mathOperator == nil {
@@ -145,7 +135,6 @@ class ViewController: UIViewController {
     }
  
     @IBAction func equalsButtonPressed(_ sender: UIButton) {
-        print("equalsButtonPressed")
         
         // Perform calculation
         result = calculateResult()
