@@ -42,51 +42,24 @@ class ViewController: UIViewController {
     @IBAction func numButtonPressed(_ sender: UIButton) {
         if sender == oneButton {
             print("the one button was pressed")
-            // Both values are empty, store as the first value
-            if firstValue == nil && secondValue == nil {
-                firstValue = 1
-            }
-    
-            // The first value has been recorded, need the second value
-            else if firstValue != nil && secondValue == nil {
-                secondValue = 1
-            } else {
-                print("You have already selected 2 values to perform math on.")
-            }
+            // Check and set value
+            checkValue(num: 1)
     
             // Update the display
             displayTextField.text = "1"
             
         } else if sender == twoButton {
             print("the two button was pressed")
-            // Both values are empty, store as the first value
-            if firstValue == nil && secondValue == nil {
-                firstValue = 2
-            }
-    
-                // The first value has been recorded, need the second value
-            else if firstValue != nil && secondValue == nil {
-                secondValue = 2
-            } else {
-                print("You have already selected 2 values to perform math on.")
-            }
+            // Check and set value
+            checkValue(num: 2)
     
             // Update the display
             displayTextField.text = "2"
             
         } else if sender == threeButton {
             print("the three button was pressed")
-            // Both values are empty, store as the first value
-            if firstValue == nil && secondValue == nil {
-                firstValue = 3
-            }
-    
-            // The first value has been recorded, need the second value
-            else if firstValue != nil && secondValue == nil {
-                secondValue = 3
-            } else {
-                print("You have already selected 2 values to perform math on.")
-            }
+            // Check and set value
+            checkValue(num: 3)
     
             // Update the display
             displayTextField.text = "3"
@@ -146,7 +119,7 @@ class ViewController: UIViewController {
         displayTextField.text = String(result)
     }
     
-    // MARK: - Helper method
+    // MARK: - Helper methods
     func calculateResult() -> Int {
         var total = 0
         
@@ -162,5 +135,19 @@ class ViewController: UIViewController {
         return total
     }
     
+    // Will check which of two values to set, or prevent from more than 2 values to be selected.
+    func checkValue(num: Int) {
+        // 1) Both values are empty, store as the first value
+        if firstValue == nil && secondValue == nil {
+            firstValue = num
+        }
+        // 2) The first value has been recorded, need the second value
+        else if firstValue != nil && secondValue == nil {
+            secondValue = num
+        // 3) After 2 values have been selected by user
+        } else {
+            print("You have already selected 2 values to perform math on.")
+        }
+    }
 }
 
