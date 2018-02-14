@@ -23,11 +23,10 @@ class ViewController: UIViewController {
     // will store the kind of operation being performed
     var mathOperator: String?
     
+    // MARK: - Outlets
     @IBOutlet weak var oneButton: UIButton!
     @IBOutlet weak var twoButton: UIButton!
     @IBOutlet weak var threeButton: UIButton!
-    
-    // MARK: - Outlets
     @IBOutlet weak var displayTextField: UITextField!
     
     // MARK: - View Life Cycle
@@ -43,73 +42,56 @@ class ViewController: UIViewController {
     @IBAction func numButtonPressed(_ sender: UIButton) {
         if sender == oneButton {
             print("the one button was pressed")
+            // Both values are empty, store as the first value
+            if firstValue == nil && secondValue == nil {
+                firstValue = 1
+            }
+    
+            // The first value has been recorded, need the second value
+            else if firstValue != nil && secondValue == nil {
+                secondValue = 1
+            } else {
+                print("You have already selected 2 values to perform math on.")
+            }
+    
+            // Update the display
+            displayTextField.text = "1"
+            
         } else if sender == twoButton {
             print("the two button was pressed")
+            // Both values are empty, store as the first value
+            if firstValue == nil && secondValue == nil {
+                firstValue = 2
+            }
+    
+                // The first value has been recorded, need the second value
+            else if firstValue != nil && secondValue == nil {
+                secondValue = 2
+            } else {
+                print("You have already selected 2 values to perform math on.")
+            }
+    
+            // Update the display
+            displayTextField.text = "2"
+            
         } else if sender == threeButton {
             print("the three button was pressed")
+            // Both values are empty, store as the first value
+            if firstValue == nil && secondValue == nil {
+                firstValue = 3
+            }
+    
+            // The first value has been recorded, need the second value
+            else if firstValue != nil && secondValue == nil {
+                secondValue = 3
+            } else {
+                print("You have already selected 2 values to perform math on.")
+            }
+    
+            // Update the display
+            displayTextField.text = "3"
         }
     }
-    
-
-//    @IBAction func oneButtonPressed(_ sender: UIButton) {
-//        print("\(oneButton)")
-//        print("\(sender)")
-//        if sender == oneButton {
-//            print("the one button was pressed")
-//        } else {
-//            print("one of the other buttons was pressed")
-//        }
-//        // Both values are empty, store as the first value
-//        if firstValue == nil && secondValue == nil {
-//            firstValue = 1
-//        }
-//
-//        // The first value has been recorded, need the second value
-//        else if firstValue != nil && secondValue == nil {
-//            secondValue = 1
-//        } else {
-//            print("You have already selected 2 values to perform math on.")
-//        }
-//
-//        // Update the display
-//        displayTextField.text = "1"
-//    }
-//
-//    @IBAction func twoButtonPressed(_ sender: UIButton) {
-//
-//        // Both values are empty, store as the first value
-//        if firstValue == nil && secondValue == nil {
-//            firstValue = 2
-//        }
-//
-//            // The first value has been recorded, need the second value
-//        else if firstValue != nil && secondValue == nil {
-//            secondValue = 2
-//        } else {
-//            print("You have already selected 2 values to perform math on.")
-//        }
-//
-//        // Update the display
-//        displayTextField.text = "2"
-//    }
-//
-//    @IBAction func threeButtonPressed(_ sender: UIButton) {
-//
-//        // Both values are empty, store as the first value
-//        if firstValue == nil && secondValue == nil {
-//            firstValue = 3
-//        }
-//
-//        // The first value has been recorded, need the second value
-//        else if firstValue != nil && secondValue == nil {
-//            secondValue = 3
-//        } else {
-//            print("You have already selected 2 values to perform math on.")
-//        }
-//
-//        // Update the display
-//        displayTextField.text = "3"
-//    }
     
     @IBAction func clearButtonPressed(_ sender: UIButton) {
         
