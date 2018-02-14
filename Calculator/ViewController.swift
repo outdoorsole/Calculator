@@ -44,25 +44,16 @@ class ViewController: UIViewController {
             print("the one button was pressed")
             // Check and set value
             checkValue(num: 1)
-    
-            // Update the display
-            displayTextField.text = "1"
             
         } else if sender == twoButton {
             print("the two button was pressed")
             // Check and set value
             checkValue(num: 2)
-    
-            // Update the display
-            displayTextField.text = "2"
             
         } else if sender == threeButton {
             print("the three button was pressed")
             // Check and set value
             checkValue(num: 3)
-    
-            // Update the display
-            displayTextField.text = "3"
         }
     }
     
@@ -120,6 +111,8 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Helper methods
+    
+    // Will check the math operator, and perform calculation
     func calculateResult() -> Int {
         var total = 0
         
@@ -148,6 +141,8 @@ class ViewController: UIViewController {
         } else {
             print("You have already selected 2 values to perform math on.")
         }
+        // Update the display
+        displayTextField.text = String(num)
     }
 }
 
